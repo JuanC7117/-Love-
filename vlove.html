@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('https://i.imgur.com/XggmbvZ.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            font-family: 'Pacifico', cursive, Arial, sans-serif;
+        }
+
+        .title {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 48px;
+            font-weight: bold;
+            color: #FF6347;
+            font-family: 'Pacifico', cursive, Arial, sans-serif;
+        }
+
+        .title a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* "Click here" text and Arrow */
+        .click-here {
+            position: absolute;
+            top: 50px;
+            right: 220px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #59ff00;
+            font-family: Arial, sans-serif;
+        }
+
+        .click-here::after {
+            content: "➡"; /* Arrow emoji */
+            margin-right: 8px;
+        }
+
+        .happy-valentine {
+            position: absolute;
+            left: 20px;
+            top: 30%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            font-weight: bold;
+            color: #FF6347;
+            font-family: 'Pacifico', cursive, Arial, sans-serif;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .happy-valentine-line2 {
+            position: absolute;
+            left: 20px;
+            top: 38%;
+            transform: translateY(-50%);
+            font-size: 50px;
+            font-weight: bold;
+            color: #FF6347;
+            font-family: 'Pacifico', cursive, Arial, sans-serif;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        /* Vertical "Yes or No" formatting */
+        .yes-no-links {
+            position: absolute;
+            left: 20px;
+            top: 60%;
+            transform: translateY(-50%);
+            font-size: 36px;
+            color: #f3ff47;
+            font-family: 'Pacifico', cursive, Arial, sans-serif;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .yes-no-links a {
+            color: #FF6347;
+            text-decoration: none;
+            font-weight: bold;
+            display: block; /* Makes each link appear on a new line */
+        }
+
+        .yes-no-links a:hover {
+            color: #FF4500;
+        }
+
+        .my-love {
+            color: rgb(0, 115, 255);
+        }
+
+        /* Transparent heart decorations */
+        .heart {
+            position: absolute;
+            background-color: rgba(255, 0, 0, 0.6); /* Transparent red */
+            width: 30px;
+            height: 30px;
+            clip-path: polygon(50% 0%, 0% 35%, 50% 100%, 100% 35%); /* Creating a heart shape */
+        }
+
+        .heart.top-left {
+            top: 20px;
+            left: 20px;
+        }
+
+        .heart.bottom-left {
+            bottom: 20px;
+            left: 20px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="click-here">Click here</div>
+
+    <div class="title">
+        <a href="https://www.lovethispic.com/uploaded_images/237204-Valentines-Day-Rose-Quote.jpg">
+            <span class="my-love">My Love</span>
+        </a>
+    </div>
+
+    <div class="happy-valentine">Happy Valentine's Day!!!</div>
+    <div class="happy-valentine-line2">Will you be my Valentine?</div>
+
+    <div class="yes-no-links">
+        <!-- Updated links with redirection -->
+        <a href="javascript:void(0);" onclick="redirectToPage('yes')">Yes</a>
+        <span>or</span>
+        <a href="javascript:void(0);" onclick="redirectToPage('no')">No</a>
+    </div>
+
+    <!-- Heart decorations -->
+    <div class="heart top-left"></div>
+    <div class="heart bottom-left"></div>
+
+    <script>
+        // Redirect function after clicking Yes or No
+        function redirectToPage(response) {
+            // Optionally, handle the responses here
+            if (response === 'yes') {
+                // Redirect to the "Yes" image URL
+                window.location.href = "https://media.tenor.com/c6_k3koMQckAAAAj/rizz-flower.gif";
+            } else {
+                // Redirect to the "No" image URL
+                window.location.href = "https://parade.com/.image/t_share/MjExMDkzNDYxOTg0NjE4MDMx/yoda-quotes.jpg";
+            }
+        }
+
+        // Fade-in effect
+        window.onload = function() {
+            document.querySelector('.happy-valentine').style.opacity = 1;
+            document.querySelector('.happy-valentine-line2').style.opacity = 1;
+        }
+    </script>
+
+</body>
+</html>
+
